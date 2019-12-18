@@ -4,6 +4,7 @@ namespace _4Asset.Domain.Models
 {
     public class Tarefa
     {
+        public int TarefaId { get; set; }
         public string Titulo { get; set; }
         public bool Status { get; set; }
         public string Descricao { get; set; }
