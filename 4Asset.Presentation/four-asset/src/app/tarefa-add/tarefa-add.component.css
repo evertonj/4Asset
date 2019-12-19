@@ -1,0 +1,30 @@
+.tarefa-container {
+    position: relative;
+    padding: 5px;
+  }
+  
+  .tarefa-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .tarefa-full-width {
+    width: 100%;
+  }
+  
+  .tarefa-full-width:nth-last-child(0) {
+    margin-bottom: 10px;
+  }
+  
+  .button-row {
+    margin: 10px 0;
+  }
+  
+  .mat-flat-button {
+    margin: 5px;
+  }
+
+  .tarefa-margin {
+    margin: 0 10px;
+  }

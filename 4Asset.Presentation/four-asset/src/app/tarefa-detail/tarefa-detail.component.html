@@ -1,0 +1,37 @@
+<div class="tarefa-container mat-elevation-z8">
+    <div class="tarefa-loading-shade"
+         *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+    <div class="button-row">
+      <a mat-flat-button color="primary" [routerLink]="['/tarefas']"><mat-icon>Lista de tarefas</mat-icon></a>
+    </div>
+    <mat-card class="tarefa-card">
+      <mat-card-header>
+        <mat-card-title><h2>{{tarefa.titulo}}</h2></mat-card-title>
+        <mat-card-subtitle>{{tarefa.descricao}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <dl>
+          <dt>Título da Tarefa:</dt>
+          <dd>{{tarefa.titulo}}</dd>
+          <dt>Descrição da Tarefa:</dt>
+          <dd>{{tarefa.descricao}}</dd>
+          <dt>Status da Tarefa:</dt>
+          <dd>{{tarefa.status}}</dd>
+          <dt>Data de criação:</dt>
+          <dd>{{tarefa.dataDeCriacao | date}}</dd>
+          <dt>Data de edição:</dt>
+          <dd>{{tarefa.dataDeEdicao | date}}</dd>
+          <dt>Data de conclusão:</dt>
+          <dd>{{tarefa.dataDeConclusao | date}}</dd>
+          <dt>Data de remoção:</dt>
+          <dd>{{tarefa.dataDeRemocao | date}}</dd>
+        </dl>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-flat-button color="primary" [routerLink]="['/tarefa-edit', tarefa._id]"><mat-icon>Alterar</mat-icon></a>
+        <a mat-flat-button color="warn" (click)="deleteTarefa(tarefa._id)"><mat-icon>Remover</mat-icon></a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
