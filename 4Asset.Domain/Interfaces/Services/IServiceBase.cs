@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace _4Asset.Domain.Interfaces.Services
+namespace FourAsset.Domain.Interfaces.Services
 {
     public interface IServiceBase<TEntity> : IDisposable where TEntity : class
     {

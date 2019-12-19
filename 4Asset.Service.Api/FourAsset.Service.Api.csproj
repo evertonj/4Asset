@@ -3,17 +3,18 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>_4Asset.Service.Api</RootNamespace>
+    <RootNamespace>FourAsset.Service.Api</RootNamespace>
+    <StartupObject>FourAsset.Service.Api.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="4.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\4Asset.Infra.CrossCutting\4Asset.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\4Asset.Infra.CrossCutting\FourAsset.Infra.CrossCutting.csproj" />
   </ItemGroup>
 
 </Project>

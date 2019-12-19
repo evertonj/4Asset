@@ -1,7 +1,7 @@
-﻿using _4Asset.Domain.Interfaces.Repositories;
-using _4Asset.Domain.Models;
+﻿using FourAsset.Domain.Interfaces.Repositories;
+using FourAsset.Domain.Models;
 
-namespace _4Asset.Infra.Data.Repositories
+namespace FourAsset.Infra.Data.Repositories
 {
     public class TarefaRepository : RepositoryBase<Tarefa>, ITarefaRepository
     {

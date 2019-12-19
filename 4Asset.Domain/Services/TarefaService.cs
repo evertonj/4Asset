@@ -1,10 +1,13 @@
-﻿using _4Asset.Domain.Interfaces.Services;
-using _4Asset.Domain.Models;
+﻿using FourAsset.Domain.Interfaces.Repositories;
+using FourAsset.Domain.Interfaces.Services;
+using FourAsset.Domain.Models;
 
-namespace _4Asset.Domain.Services
+namespace FourAsset.Domain.Services
 {
     public class TarefaService : ServiceBase<Tarefa>, ITarefaService
     {
-
+        public TarefaService(IRepositoryBase<Tarefa> repositoryBase) : base(repositoryBase)
+        {
+        }
     }
 }

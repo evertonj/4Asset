@@ -1,13 +1,13 @@
-﻿using _4Asset.Application;
-using _4Asset.Application.Interfaces;
-using _4Asset.Domain.Interfaces.Repositories;
-using _4Asset.Domain.Interfaces.Services;
-using _4Asset.Domain.Services;
-using _4Asset.Infra.Data.Context;
-using _4Asset.Infra.Data.Repositories;
+﻿using FourAsset.Application;
+using FourAsset.Application.Interfaces;
+using FourAsset.Domain.Interfaces.Repositories;
+using FourAsset.Domain.Interfaces.Services;
+using FourAsset.Domain.Services;
+using FourAsset.Infra.Data.Context;
+using FourAsset.Infra.Data.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace _4Asset.Infra.CrossCutting
+namespace FourAsset.Infra.CrossCutting
 {
     public static class NativeInjectorBootStrapper
     {

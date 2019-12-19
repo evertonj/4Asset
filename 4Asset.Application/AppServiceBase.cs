@@ -1,9 +1,9 @@
-﻿using _4Asset.Application.Interfaces;
-using _4Asset.Domain.Interfaces.Services;
+﻿using FourAsset.Application.Interfaces;
+using FourAsset.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 
-namespace _4Asset.Application
+namespace FourAsset.Application
 {
     public class AppServiceBase<TEntity> : IDisposable, IAppServiceBase<TEntity> where TEntity : class
     {

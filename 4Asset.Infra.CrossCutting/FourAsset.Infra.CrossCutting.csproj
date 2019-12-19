@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>FourAsset.Infra.CrossCutting</RootNamespace>
+    <AssemblyName>FourAsset.Infra.CrossCutting</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\4Asset.Application\FourAsset.Application.csproj" />
+    <ProjectReference Include="..\4Asset.Infra.Data\FourAsset.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,11 +1,11 @@
-﻿using _4Asset.Domain.Interfaces.Repositories;
-using _4Asset.Infra.Data.Context;
+﻿using FourAsset.Domain.Interfaces.Repositories;
+using FourAsset.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace _4Asset.Infra.Data.Repositories
+namespace FourAsset.Infra.Data.Repositories
 {
     public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
@@ -43,6 +43,8 @@ namespace _4Asset.Infra.Data.Repositories
 
         public void Update(TEntity obj)
         {
+            var dbSet = Db.Set<TEntity>();
+            dbSet.Attach(obj);
             Db.Entry(obj).State = EntityState.Modified;
             Db.SaveChanges();
         }

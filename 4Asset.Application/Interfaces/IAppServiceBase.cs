@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace _4Asset.Application.Interfaces
+namespace FourAsset.Application.Interfaces
 {
     public interface IAppServiceBase<TEntity> where TEntity : class
     {

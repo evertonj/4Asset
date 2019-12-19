@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace _4Asset.Service.Api
+namespace FourAsset.Service.Api
 {
     public class Program
     {

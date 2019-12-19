@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>_4Asset.Domain</RootNamespace>
+    <RootNamespace>FourAsset.Domain</RootNamespace>
   </PropertyGroup>
 
 </Project>

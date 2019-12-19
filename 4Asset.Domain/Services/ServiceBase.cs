@@ -1,14 +1,20 @@
-﻿using _4Asset.Domain.Interfaces.Repositories;
-using _4Asset.Domain.Interfaces.Services;
+﻿using FourAsset.Domain.Interfaces.Repositories;
+using FourAsset.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace _4Asset.Domain.Services
+namespace FourAsset.Domain.Services
 {
     public class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : class
     {
         private readonly IRepositoryBase<TEntity> _repositoryBase;
+
+        public ServiceBase(IRepositoryBase<TEntity> repositoryBase)
+        {
+            _repositoryBase = repositoryBase;
+        }
+
         public void Add(TEntity obj)
         {
             _repositoryBase.Add(obj);

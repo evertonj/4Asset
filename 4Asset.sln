@@ -17,17 +17,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{A002535F-2527-4D4F-A82A-8AE935B8ADA1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4Asset.Domain", "4Asset.Domain\4Asset.Domain.csproj", "{05B065EF-CD03-4A5D-AB9D-7932B578748F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FourAsset.Domain", "4Asset.Domain\FourAsset.Domain.csproj", "{05B065EF-CD03-4A5D-AB9D-7932B578748F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4Asset.Application", "4Asset.Application\4Asset.Application.csproj", "{15AFA328-D102-43EA-BA2C-133B8C3316A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourAsset.Application", "4Asset.Application\FourAsset.Application.csproj", "{15AFA328-D102-43EA-BA2C-133B8C3316A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4Asset.Infra.Data", "4Asset.Infra.Data\4Asset.Infra.Data.csproj", "{CB204FE4-B0EC-4E01-BCD1-9C211061D055}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourAsset.Infra.Data", "4Asset.Infra.Data\FourAsset.Infra.Data.csproj", "{CB204FE4-B0EC-4E01-BCD1-9C211061D055}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4Asset.Infra.CrossCutting", "4Asset.Infra.CrossCutting\4Asset.Infra.CrossCutting.csproj", "{60BDBA76-7DBA-431B-8E04-BC0116C8687B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourAsset.Infra.CrossCutting", "4Asset.Infra.CrossCutting\FourAsset.Infra.CrossCutting.csproj", "{60BDBA76-7DBA-431B-8E04-BC0116C8687B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{7B032015-FDA0-4FD0-B1FA-AEE44A62AE5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4Asset.Service.Api", "4Asset.Service.Api\4Asset.Service.Api.csproj", "{D4B12238-352C-4676-9FA1-D585B5C9F19F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourAsset.Service.Api", "4Asset.Service.Api\FourAsset.Service.Api.csproj", "{D4B12238-352C-4676-9FA1-D585B5C9F19F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Test", "5 - Test", "{0A0C6790-7B68-4334-87C8-EE513718DCBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourAsset.IntegrationTest", "FourAsset.IntegrationTest\FourAsset.IntegrationTest.csproj", "{012D2112-36CB-447D-8F2F-0A105DB705AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +59,10 @@ Global
 		{D4B12238-352C-4676-9FA1-D585B5C9F19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4B12238-352C-4676-9FA1-D585B5C9F19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4B12238-352C-4676-9FA1-D585B5C9F19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012D2112-36CB-447D-8F2F-0A105DB705AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012D2112-36CB-447D-8F2F-0A105DB705AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012D2112-36CB-447D-8F2F-0A105DB705AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012D2112-36CB-447D-8F2F-0A105DB705AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +80,8 @@ Global
 		{60BDBA76-7DBA-431B-8E04-BC0116C8687B} = {A002535F-2527-4D4F-A82A-8AE935B8ADA1}
 		{7B032015-FDA0-4FD0-B1FA-AEE44A62AE5B} = {1100096A-0653-4819-819C-71E7627A145D}
 		{D4B12238-352C-4676-9FA1-D585B5C9F19F} = {5F6B5055-EBD5-4FB8-84C4-EF511F51B159}
+		{0A0C6790-7B68-4334-87C8-EE513718DCBE} = {1100096A-0653-4819-819C-71E7627A145D}
+		{012D2112-36CB-447D-8F2F-0A105DB705AE} = {0A0C6790-7B68-4334-87C8-EE513718DCBE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8CF53869-869A-4CDA-86F1-3F60C07A8762}

@@ -1,6 +1,6 @@
-﻿using _4Asset.Domain.Models;
+﻿using FourAsset.Domain.Models;
 
-namespace _4Asset.Domain.Interfaces.Repositories
+namespace FourAsset.Domain.Interfaces.Repositories
 {
     public interface ITarefaRepository : IRepositoryBase<Tarefa>
     {

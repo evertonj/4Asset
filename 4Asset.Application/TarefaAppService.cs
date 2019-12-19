@@ -1,8 +1,8 @@
-﻿using _4Asset.Application.Interfaces;
-using _4Asset.Domain.Interfaces.Services;
-using _4Asset.Domain.Models;
+﻿using FourAsset.Application.Interfaces;
+using FourAsset.Domain.Interfaces.Services;
+using FourAsset.Domain.Models;
 
-namespace _4Asset.Application
+namespace FourAsset.Application
 {
     public class TarefaAppService : AppServiceBase<Tarefa>, ITarefaAppService
     {

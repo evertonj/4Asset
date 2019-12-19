@@ -1,6 +1,6 @@
-﻿using _4Asset.Domain.Models;
+﻿using FourAsset.Domain.Models;
 
-namespace _4Asset.Application.Interfaces
+namespace FourAsset.Application.Interfaces
 {
     public interface ITarefaAppService : IAppServiceBase<Tarefa>
     {
