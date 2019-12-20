@@ -14,12 +14,21 @@ namespace FourAsset.Service.Api
         {
             Configuration = configuration;
         }
-
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                builder =>
+                {
+                    builder.WithOrigins("http://localhost:4200");
+                });
+            });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddSwaggerGen(c =>
@@ -55,8 +64,8 @@ namespace FourAsset.Service.Api
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "4Asset API V1");
                 c.RoutePrefix = string.Empty;
             });
-
-            //app.UseHttpsRedirection();
+            app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
+            app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

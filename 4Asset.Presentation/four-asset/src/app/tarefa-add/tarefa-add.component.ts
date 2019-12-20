@@ -30,7 +30,7 @@ export class TarefaAddComponent implements OnInit {
     this.tarefaForm = this.formBuilder.group({
       'titulo' : [null, Validators.required],
       'descricao' : [null, Validators.required],
-      'status' : [null, Validators.required]
+      'status' : [null, Validators.nullValidator]
     });
   }
 

@@ -9,7 +9,7 @@ namespace FourAsset.Domain.Interfaces.Services
         void Add(TEntity obj);
         void AddRange(ICollection<TEntity> entities);
         TEntity GetById(int id);
-        Task<ICollection<TEntity>> GetAll();
+        ICollection<TEntity> GetAll();
         void Update(TEntity obj);
         void Remove(TEntity obj);
         int SaveChanges();

@@ -25,7 +25,7 @@ namespace FourAsset.Domain.Services
             _repositoryBase.AddRange(entities);
         }
 
-        public Task<ICollection<TEntity>> GetAll()
+        public ICollection<TEntity> GetAll()
         {
             return _repositoryBase.GetAll();
         }

@@ -9,7 +9,7 @@ import {Tarefa} from '../tarefa';
 })
 export class TarefasComponent implements OnInit {
 
-  displayedColumns: string[] = ['titulo','descricao'];
+  displayedColumns: string[] = ['titulo','descricao', 'status'];
   data: Tarefa[] = [];
   isLoadingResults = true;
 

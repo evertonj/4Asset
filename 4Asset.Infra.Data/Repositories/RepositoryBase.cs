@@ -3,6 +3,7 @@ using FourAsset.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace FourAsset.Infra.Data.Repositories
@@ -23,9 +24,9 @@ namespace FourAsset.Infra.Data.Repositories
             Db.SaveChanges();
         }
 
-        public async Task<ICollection<TEntity>> GetAll()
+        public ICollection<TEntity> GetAll()
         {
-            return await Db.Set<TEntity>().ToListAsync();
+            return Db.Set<TEntity>().ToList();
         }
 
         public TEntity GetById(int id)

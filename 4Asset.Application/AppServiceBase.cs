@@ -26,7 +26,7 @@ namespace FourAsset.Application
 
         public ICollection<TEntity> GetAll()
         {
-            return _serviceBase.GetAll().GetAwaiter().GetResult();
+            return _serviceBase.GetAll();
         }
 
         public TEntity GetById(int id)

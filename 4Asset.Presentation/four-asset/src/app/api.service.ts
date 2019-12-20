@@ -11,7 +11,7 @@ const httpOptions = {
   'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'})
 };
 
-const apiUrl = 'http://127.0.0.1:5000/api/tarefas'
+const apiUrl = 'https://localhost:44372/api/tarefas'
 
 @Injectable({
   providedIn: 'root'
@@ -38,7 +38,7 @@ export class ApiService {
 
   addTarefa(tarefa: Tarefa): Observable<Tarefa> {
     return this.http.post<Tarefa>(apiUrl, tarefa, httpOptions).pipe(
-      tap((tarefa: any) => console.log(`added tarefa w/ id=${tarefa._id}`)),
+      tap((tarefa: any) => console.log(`added tarefa w/ id=${tarefa.tarefaId}`)),
       catchError(this.handleError<Tarefa>('addtarefa'))
     );
   }

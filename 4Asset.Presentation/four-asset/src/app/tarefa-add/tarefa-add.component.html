@@ -22,7 +22,7 @@
             <span *ngIf="!tarefaForm.get('descricao').valid && tarefaForm.get('descricao').touched">Por favor digite a descrição da tarefa</span>
           </mat-error>
         </mat-form-field>
-        <mat-checkbox formControlName="status">Selecione caso a tarefa já esteja concluída.</mat-checkbox>
+          <mat-checkbox formControlName="status">Selecione caso a tarefa já esteja concluída.</mat-checkbox>
         <div class="button-row">
           <button type="submit" [disabled]="!tarefaForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon> Salvar</button>
         </div>
