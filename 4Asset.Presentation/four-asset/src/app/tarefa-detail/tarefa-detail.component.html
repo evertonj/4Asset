@@ -4,7 +4,7 @@
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="primary" [routerLink]="['/tarefas']"><mat-icon>Lista de tarefas</mat-icon></a>
+      <a mat-flat-button color="primary" [routerLink]="['/tarefas']"><mat-icon>list</mat-icon>Lista de tarefas</a>
     </div>
     <mat-card class="tarefa-card">
       <mat-card-header>
@@ -30,8 +30,8 @@
         </dl>
       </mat-card-content>
       <mat-card-actions>
-        <a mat-flat-button color="primary" [routerLink]="['/tarefa-edit', tarefa._id]"><mat-icon>Alterar</mat-icon></a>
-        <a mat-flat-button color="warn" (click)="deleteTarefa(tarefa._id)"><mat-icon>Remover</mat-icon></a>
+        <a mat-flat-button color="primary" [routerLink]="['/tarefa-edit', tarefa.tarefaId]"><mat-icon>edit</mat-icon></a>
+        <a mat-flat-button color="warn" (click)="deleteTarefa(tarefa.tarefaId)"><mat-icon>delete</mat-icon></a>
       </mat-card-actions>
     </mat-card>
   </div>

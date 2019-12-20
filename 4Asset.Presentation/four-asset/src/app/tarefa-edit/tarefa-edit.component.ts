@@ -18,14 +18,10 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class TarefaEditComponent implements OnInit {
   tarefaForm: FormGroup;
-  _id = '';
+  tarefaId = '';
   titulo = '';
   descricao = '';
   status: false;
-  dataDeCriacao: Date;
-  dataDeEdicao: Date;
-  dataDeConclusao: Date;
-  dataDeRemocao: Date;
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
 
@@ -42,24 +38,20 @@ export class TarefaEditComponent implements OnInit {
 
   getTarefa(id: any) {
     this.api.getTarefa(id).subscribe((data: any) => {
-      this._id = data._id;
+      this.tarefaId = data.tarefaId;
       this.tarefaForm.setValue({
         titulo: data.titulo,
         descricao: data.descricao,
-        status: data.status,
-        dataDeCriacao: data.dataDeCriacao,
-        dataDeEdicao: data.dataDeEdicao,
-        dataDeConclusao: data.dataDeConclusao,
-        dataDeRemocao: data.dataDeRemocao,
+        status: data.status
       });
     });
   }
 
   onFormSubmit() {
     this.isLoadingResults = true;
-    this.api.updateTarefa(this._id, this.tarefaForm.value)
+    this.api.updateTarefa(this.tarefaId, this.tarefaForm.value)
       .subscribe((res: any) => {
-          const id = res._id;
+          const id = res.tarefaId;
           this.isLoadingResults = false;
           this.router.navigate(['/tarefa-details', id]);
         }, (err: any) => {
@@ -70,6 +62,6 @@ export class TarefaEditComponent implements OnInit {
   }
 
   tarefaDetails() {
-    this.router.navigate(['/tarefa-details', this._id]);
+    this.router.navigate(['/tarefa-details', this.tarefaId]);
   }
 }

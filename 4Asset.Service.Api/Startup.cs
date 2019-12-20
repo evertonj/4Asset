@@ -27,6 +27,13 @@ namespace FourAsset.Service.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "4Asset API", Version = "v1" });
             });
 
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowMyOrigin",
+                builder => builder.WithOrigins("http://localhost:4200"));
+            });
+
             NativeInjectorBootStrapper.RegisterServices(services);
         }
 
@@ -49,7 +56,7 @@ namespace FourAsset.Service.Api
                 c.RoutePrefix = string.Empty;
             });
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

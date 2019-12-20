@@ -4,7 +4,7 @@
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="primary" [routerLink]="['/tarefas']"><mat-icon>Lista de tarefas</mat-icon></a>
+      <a mat-flat-button color="primary" [routerLink]="['/tarefas']"><mat-icon>list</mat-icon>Lista de tarefas</a>
     </div>
     <mat-card class="tarefa-card">
       <form [formGroup]="tarefaForm" (ngSubmit)="onFormSubmit()">
@@ -22,15 +22,9 @@
             <span *ngIf="!tarefaForm.get('descricao').valid && tarefaForm.get('descricao').touched">Por favor digite a descrição da tarefa</span>
           </mat-error>
         </mat-form-field>
-        <mat-form-field class="tarefa-full-width">
-          <input matInput placeholder="tarefa Price" formControlName="prod_price"
-                 [errorStateMatcher]="matcher">
-          <mat-error>
-            <span *ngIf="!tarefaForm.get('prod_price').valid && tarefaForm.get('prod_price').touched">Please enter tarefa Price</span>
-          </mat-error>
-        </mat-form-field>
+        <mat-checkbox formControlName="status">Selecione caso a tarefa já esteja concluída.</mat-checkbox>
         <div class="button-row">
-          <button type="submit" [disabled]="!tarefaForm.valid" mat-flat-button color="primary"><mat-icon>Salvar</mat-icon></button>
+          <button type="submit" [disabled]="!tarefaForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon> Salvar</button>
         </div>
       </form>
     </mat-card>

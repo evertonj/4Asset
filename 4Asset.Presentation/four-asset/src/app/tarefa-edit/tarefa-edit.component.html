@@ -4,7 +4,7 @@
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
     <div class="button-row">
-      <a mat-flat-button color="primary" (click)="tarefaDetails()"><mat-icon>Detalhes</mat-icon></a>
+      <a mat-flat-button color="primary" (click)="tarefaDetails()"><mat-icon>info</mat-icon> Detalhes</a>
     </div>
     <mat-card class="tarefa-card">
       <form [formGroup]="tarefaForm" (ngSubmit)="onFormSubmit()">
@@ -22,15 +22,9 @@
             <span *ngIf="!tarefaForm.get('descricao').valid && tarefaForm.get('descricao').touched">Por favor digite a descrição da tarefa</span>
           </mat-error>
         </mat-form-field>
-        <mat-form-field class="tarefa-full-width">
-          <input matInput placeholder="Status da tarefa" formControlName="status"
-                 [errorStateMatcher]="matcher">
-          <mat-error>
-            <span *ngIf="!tarefaForm.get('status').valid && tarefaForm.get('status').touched">Defina o Status da tarefa</span>
-          </mat-error>
-        </mat-form-field>
+        <mat-checkbox formControlName="status">Selecione caso a tarefa já esteja concluída.</mat-checkbox>
         <div class="button-row">
-          <button type="submit" [disabled]="!tarefaForm.valid" mat-flat-button color="primary"><mat-icon>Salvar</mat-icon></button>
+          <button type="submit" [disabled]="!tarefaForm.valid" mat-flat-button color="primary"><mat-icon>save</mat-icon> Alterar</button>
         </div>
       </form>
     </mat-card>

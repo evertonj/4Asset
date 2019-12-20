@@ -19,6 +19,7 @@ import {
   MatTableModule,
   MatIconModule,
   MatButtonModule,
+  MatCheckboxModule,
   MatCardModule,
   MatFormFieldModule } from '@angular/material';
 
@@ -45,6 +46,7 @@ import {
     MatProgressSpinnerModule,
     MatIconModule,
     MatButtonModule,
+    MatCheckboxModule,
     MatCardModule,
     MatFormFieldModule
   ],

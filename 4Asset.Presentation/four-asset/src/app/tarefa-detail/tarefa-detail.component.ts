@@ -10,7 +10,7 @@ import { Tarefa } from '../tarefa';
 })
 export class TarefaDetailComponent implements OnInit {
 
-  tarefa: Tarefa = { _id: '', titulo: '', descricao: '', status: null, dataCriacao: null,dataEdicao:null,dataConclusao:null,dataRemocao:null };
+  tarefa: Tarefa = { tarefaId: '', titulo: '', descricao: '', status: null, dataCriacao: null,dataEdicao:null,dataConclusao:null,dataRemocao:null };
   isLoadingResults = true;
 
   constructor(private route: ActivatedRoute, private api: ApiService, private router: Router) { }

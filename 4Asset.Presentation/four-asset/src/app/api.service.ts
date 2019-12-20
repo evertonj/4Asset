@@ -5,10 +5,13 @@ import { catchError, tap } from 'rxjs/operators';
 import { Tarefa } from './tarefa';
 
 const httpOptions = {
-  headers: new HttpHeaders({'Content-Type': 'application/json'})
+  headers: new HttpHeaders({'Content-Type': 'application/json',
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'})
 };
 
-const apiUrl = 'https://localhost:44309/api/tarefas/'
+const apiUrl = 'http://127.0.0.1:5000/api/tarefas'
 
 @Injectable({
   providedIn: 'root'

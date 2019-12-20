@@ -38,7 +38,7 @@ export class TarefaAddComponent implements OnInit {
     this.isLoadingResults = true;
     this.api.addTarefa(this.tarefaForm.value)
       .subscribe((res: any) => {
-          const id = res._id;
+          const id = res.tarefaId;
           this.isLoadingResults = false;
           this.router.navigate(['/tarefa-details', id]);
         }, (err: any) => {

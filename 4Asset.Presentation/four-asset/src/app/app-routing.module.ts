@@ -14,17 +14,17 @@ const routes: Routes = [
     data:{title:'Lista de tarefas'}
   },
   {
-    path:'tarefas-add',
+    path:'tarefa-add',
     component:TarefaAddComponent,
     data:{title:'Adicionar tarefa'}
   },
   {
-    path:'tarefas-edit/:id',
+    path:'tarefa-edit/:id',
     component:TarefaEditComponent,
     data:{title:'Alterar tarefa'}
   },
   {
-    path:'tarefas-details/:id',
+    path:'tarefa-details/:id',
     component:TarefaDetailComponent,
     data:{title:'Detalhes da tarefa'}
   },
